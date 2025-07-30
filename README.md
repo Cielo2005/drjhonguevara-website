@@ -73,6 +73,8 @@ npm start
 
 El sitio se abrirá en [http://localhost:3000](http://localhost:3000)
 
+**🌐 Sitio en producción**: [https://drjhonguevara.online](https://drjhonguevara.online)
+
 ## 🚀 Scripts Disponibles
 
 ### `npm start`
@@ -85,6 +87,9 @@ Ejecuta las pruebas unitarias en modo interactivo.
 ### `npm run build`
 Construye la aplicación para producción en la carpeta `build`.\
 El código se optimiza y minifica para el mejor rendimiento.
+
+### `npm run deploy`
+Despliega el sitio web a GitHub Pages con el dominio personalizado.
 
 ### `npm run eject`
 **⚠️ Nota: Esta es una operación irreversible**
@@ -148,9 +153,9 @@ npm run build
 Esto creará una carpeta `build` optimizada lista para desplegar en cualquier servidor web.
 
 ### Opciones de Hosting
+- **GitHub Pages** (configurado) - [drjhonguevara.online](https://drjhonguevara.online)
 - Netlify
 - Vercel
-- GitHub Pages
 - Servidor web tradicional
 
 ## 📞 Contacto y Soporte
