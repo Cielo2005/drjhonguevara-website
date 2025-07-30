@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Ajuste por header fijo */
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ========== Responsive Typography ========== */
+@media (max-width: 1200px) {
+  html { font-size: 15px; }
+}
+
+@media (max-width: 992px) {
+  html { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  html { font-size: 13px; }
+}
+
+@media (max-width: 576px) {
+  html { font-size: 12px; }
+}
+
+/* ========== General para Secciones a Pantalla Completa ========== */
+
+.fullscreen-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-section video, 
+.fullscreen-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+/* Responsive background images */
+@media (max-width: 768px) {
+  .fullscreen-section video, 
+  .fullscreen-section img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.fullscreen-section .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+/* ========== Fondos Personalizados ========== */
+
+.custom-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Opcionales si quieres tratar secciones individuales */
+#inicio {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#cirugia {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========== Contenedor principal App ========== */
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}

@@ -1,0 +1,620 @@
+.testimonios-modern-section {
+  background: linear-gradient(90deg, #d7e2f5 60%, #fff 100%);
+  padding: 60px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonios-modern-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  width: 95%;
+  gap: 60px;
+}
+
+.testimonios-modern-photos {
+  position: relative;
+  width: 320px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonios-modern-photo {
+  position: absolute;
+  width: 210px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  opacity: 0;
+  transform: scale(0.8) translateX(0);
+  transition: 
+    opacity 0.5s cubic-bezier(.4,2,.6,1),
+    transform 0.6s cubic-bezier(.4,2,.6,1),
+    z-index 0s;
+  z-index: 1;
+}
+
+.testimonios-modern-photo.activo {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 3;
+  box-shadow: 0 12px 36px rgba(78,142,247,0.13);
+}
+
+.testimonios-modern-photo.izquierda {
+  opacity: 0.7;
+  transform: scale(0.85) translateX(-90px);
+  z-index: 2;
+  filter: blur(1px);
+}
+
+.testimonios-modern-photo.derecha {
+  opacity: 0.7;
+  transform: scale(0.85) translateX(90px);
+  z-index: 2;
+  filter: blur(1px);
+}
+
+.testimonios-modern-photo.oculto {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimonios-modern-texto {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.testimonios-modern-label {
+  color: #3182ce;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.testimonios-modern-highlight {
+  color: #3182ce;
+}
+
+.testimonios-modern-texto h2 {
+  font-size: 2.2rem;
+  color: #222;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.testimonios-modern-frase {
+  color: #444;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  min-height: 60px;
+  font-style: italic;
+  transition: color 0.3s;
+}
+
+.testimonios-modern-persona {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonios-modern-nombre {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+.testimonios-modern-prof {
+  color: #888;
+  font-size: 1rem;
+}
+
+.testimonios-modern-nav {
+  display: flex;
+  gap: 18px;
+  margin: 12px 0 0 0;
+}
+
+.testimonios-modern-btn {
+  background: #eaf2ff;
+  color: #3182ce;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(49,130,206,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonios-modern-btn:hover {
+  background: #3182ce;
+  color: #fff;
+}
+
+.testimonios-modern-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.testimonios-modern-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c3dafe;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.testimonios-modern-dot.activo {
+  background: #3182ce;
+}
+
+@media (max-width: 1400px) {
+  .testimonios-modern-section {
+    padding: 55px 0;
+  }
+  
+  .testimonios-modern-container {
+    max-width: 95vw;
+    gap: 55px;
+  }
+  
+  .testimonios-modern-photos {
+    width: 300px;
+    height: 350px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 195px;
+    height: 270px;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 2.1rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .testimonios-modern-section {
+    padding: 50px 0;
+  }
+  
+  .testimonios-modern-container {
+    gap: 50px;
+    width: 90%;
+  }
+  
+  .testimonios-modern-photos {
+    width: 280px;
+    height: 330px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 180px;
+    height: 250px;
+  }
+  
+  .testimonios-modern-texto {
+    min-width: 300px;
+    max-width: 450px;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 2rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 1.05rem;
+    min-height: 55px;
+  }
+  
+  .testimonios-modern-label {
+    font-size: 0.95rem;
+  }
+  
+  .testimonios-modern-nome {
+    font-size: 1.05rem;
+  }
+  
+  .testimonios-modern-prof {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .testimonios-modern-container {
+    gap: 45px;
+  }
+  
+  .testimonios-modern-photos {
+    width: 260px;
+    height: 310px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 170px;
+    height: 230px;
+  }
+  
+  .testimonios-modern-photo.izquierda {
+    transform: scale(0.85) translateX(-75px);
+  }
+  
+  .testimonios-modern-photo.derecha {
+    transform: scale(0.85) translateX(75px);
+  }
+  
+  .testimonios-modern-texto {
+    min-width: 280px;
+    max-width: 420px;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 1.9rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 1rem;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonios-modern-section {
+    padding: 40px 0;
+  }
+  
+  .testimonios-modern-container {
+    flex-direction: column;
+    gap: 35px;
+    width: 95%;
+  }
+  
+  .testimonios-modern-photos {
+    margin-bottom: 0;
+    width: 240px;
+    height: 290px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 160px;
+    height: 220px;
+  }
+  
+  .testimonios-modern-photo.izquierda {
+    transform: scale(0.85) translateX(-60px);
+  }
+  
+  .testimonios-modern-photo.derecha {
+    transform: scale(0.85) translateX(60px);
+  }
+  
+  .testimonios-modern-texto {
+    text-align: center;
+    min-width: 250px;
+    max-width: 400px;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 1.8rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 0.95rem;
+    min-height: 45px;
+  }
+  
+  .testimonios-modern-nav {
+    justify-content: center;
+  }
+  
+  .testimonios-modern-dots {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonios-modern-section {
+    padding: 35px 0;
+  }
+  
+  .testimonios-modern-container {
+    gap: 30px;
+  }
+  
+  .testimonios-modern-photos {
+    width: 220px;
+    height: 260px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 145px;
+    height: 200px;
+  }
+  
+  .testimonios-modern-photo.izquierda {
+    transform: scale(0.8) translateX(-50px);
+  }
+  
+  .testimonios-modern-photo.derecha {
+    transform: scale(0.8) translateX(50px);
+  }
+  
+  .testimonios-modern-texto {
+    min-width: 220px;
+    max-width: 350px;
+    gap: 15px;
+  }
+  
+  .testimonios-modern-label {
+    font-size: 0.9rem;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 1.6rem;
+    margin: 0 0 6px 0;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 0.9rem;
+    min-height: 40px;
+    margin-bottom: 8px;
+  }
+  
+  .testimonios-modern-persona {
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .testimonios-modern-nombre {
+    font-size: 1rem;
+  }
+  
+  .testimonios-modern-prof {
+    font-size: 0.9rem;
+  }
+  
+  .testimonios-modern-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+  
+  .testimonios-modern-nav {
+    gap: 15px;
+    margin: 10px 0 0 0;
+  }
+  
+  .testimonios-modern-dots {
+    gap: 6px;
+    margin-top: 8px;
+  }
+  
+  .testimonios-modern-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonios-modern-section {
+    padding: 30px 0;
+  }
+  
+  .testimonios-modern-container {
+    gap: 25px;
+    width: 90%;
+  }
+  
+  .testimonios-modern-photos {
+    width: 200px;
+    height: 230px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 130px;
+    height: 180px;
+  }
+  
+  .testimonios-modern-photo.izquierda {
+    transform: scale(0.8) translateX(-40px);
+  }
+  
+  .testimonios-modern-photo.derecha {
+    transform: scale(0.8) translateX(40px);
+  }
+  
+  .testimonios-modern-texto {
+    min-width: 200px;
+    max-width: 320px;
+    gap: 12px;
+  }
+  
+  .testimonios-modern-label {
+    font-size: 0.85rem;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 1.4rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 0.85rem;
+    min-height: 35px;
+  }
+  
+  .testimonios-modern-nombre {
+    font-size: 0.95rem;
+  }
+  
+  .testimonios-modern-prof {
+    font-size: 0.85rem;
+  }
+  
+  .testimonios-modern-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  
+  .testimonios-modern-nav {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonios-modern-section {
+    padding: 25px 0;
+  }
+  
+  .testimonios-modern-container {
+    gap: 20px;
+    width: 95%;
+  }
+  
+  .testimonios-modern-photos {
+    width: 180px;
+    height: 210px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 115px;
+    height: 160px;
+  }
+  
+  .testimonios-modern-photo.izquierda {
+    transform: scale(0.75) translateX(-35px);
+  }
+  
+  .testimonios-modern-photo.derecha {
+    transform: scale(0.75) translateX(35px);
+  }
+  
+  .testimonios-modern-texto {
+    min-width: 180px;
+    max-width: 280px;
+    gap: 10px;
+  }
+  
+  .testimonios-modern-label {
+    font-size: 0.8rem;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 1.25rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 0.8rem;
+    min-height: 30px;
+  }
+  
+  .testimonios-modern-persona {
+    margin-top: 5px;
+    margin-bottom: 6px;
+  }
+  
+  .testimonios-modern-nombre {
+    font-size: 0.9rem;
+  }
+  
+  .testimonios-modern-prof {
+    font-size: 0.8rem;
+  }
+  
+  .testimonios-modern-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .testimonios-modern-nav {
+    gap: 10px;
+    margin: 8px 0 0 0;
+  }
+  
+  .testimonios-modern-dots {
+    gap: 5px;
+    margin-top: 6px;
+  }
+  
+  .testimonios-modern-dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .testimonios-modern-section {
+    padding: 20px 0;
+  }
+  
+  .testimonios-modern-photos {
+    width: 160px;
+    height: 190px;
+  }
+  
+  .testimonios-modern-photo {
+    width: 100px;
+    height: 140px;
+  }
+  
+  .testimonios-modern-photo.izquierda {
+    transform: scale(0.7) translateX(-30px);
+  }
+  
+  .testimonios-modern-photo.derecha {
+    transform: scale(0.7) translateX(30px);
+  }
+  
+  .testimonios-modern-texto {
+    max-width: 250px;
+  }
+  
+  .testimonios-modern-texto h2 {
+    font-size: 1.1rem;
+  }
+  
+  .testimonios-modern-frase {
+    font-size: 0.75rem;
+    min-height: 25px;
+  }
+  
+  .testimonios-modern-nombre {
+    font-size: 0.85rem;
+  }
+  
+  .testimonios-modern-prof {
+    font-size: 0.75rem;
+  }
+  
+  .testimonios-modern-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+}

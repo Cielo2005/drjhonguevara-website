@@ -1,0 +1,7 @@
+.inicio-section {
+  display: flex;              /* Para alinear contenido dentro */
+  align-items: center;        /* Centrar verticalmente */
+  justify-content: center;    /* Centrar horizontalmente */
+  color: white;               /* Texto blanco si pones algo encima */
+  text-align: center;         /* Centrar texto */
+}
