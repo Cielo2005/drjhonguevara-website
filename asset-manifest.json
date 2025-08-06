@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.84f4b9c0.css",
+    "main.css": "/static/css/main.5788e323.css",
     "main.js": "/static/js/main.e88e0adb.js",
     "static/js/453.f01e7279.chunk.js": "/static/js/453.f01e7279.chunk.js",
     "static/media/video-3.mp4": "/static/media/video-3.48cda407d8d3b450cfa4.mp4",
@@ -85,12 +85,12 @@
     "static/media/icolaparoscopica.png": "/static/media/icolaparoscopica.e07d11b5f8c095b77b12.png",
     "static/media/icotumorbordelaine.png": "/static/media/icotumorbordelaine.732b574fb164f0f6fd77.png",
     "index.html": "/index.html",
-    "main.84f4b9c0.css.map": "/static/css/main.84f4b9c0.css.map",
+    "main.5788e323.css.map": "/static/css/main.5788e323.css.map",
     "main.e88e0adb.js.map": "/static/js/main.e88e0adb.js.map",
     "453.f01e7279.chunk.js.map": "/static/js/453.f01e7279.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84f4b9c0.css",
+    "static/css/main.5788e323.css",
     "static/js/main.e88e0adb.js"
   ]
 }
