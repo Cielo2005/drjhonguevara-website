@@ -107,3 +107,36 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
+/* ========== SOLO MÓVILES - Eliminar espacios entre secciones ========== */
+@media (max-width: 768px) {
+  .App > section {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  #inicio {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
+  
+  /* Asegurar que servicios esté pegado a inicio */
+  section + section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .App > section {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  #inicio {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
+}
