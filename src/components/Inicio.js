@@ -9,15 +9,12 @@ function Inicio() {
       className="inicio-section"
       style={{
         backgroundImage: `url(${InicioImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '100vh'
       }}
     >
+      {/* Solo la imagen de fondo, sin overlays ni contenedores */}
     </section>
   );
 }
 
 export default Inicio;
+

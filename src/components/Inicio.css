@@ -1,7 +1,60 @@
 .inicio-section {
-  display: flex;              /* Para alinear contenido dentro */
-  align-items: center;        /* Centrar verticalmente */
-  justify-content: center;    /* Centrar horizontalmente */
-  color: white;               /* Texto blanco si pones algo encima */
-  text-align: center;         /* Centrar texto */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: contain; /* Imagen completa sin recortar */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* Mejor para móviles */
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-filter: none !important;
+  -moz-filter: none !important;
+  -ms-filter: none !important;
+  padding: 80px 0; /* Espacio para el header */
+}
+
+
+
+
+/* Responsivo para tablets */
+@media (max-width: 1024px) {
+  .inicio-section {
+    background-size: contain;
+    background-position: center center;
+    padding: 70px 10px;
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .inicio-section {
+    min-height: 100vh;
+    background-size: contain; /* Imagen completa sin recortar */
+    background-position: center center;
+    padding: 60px 10px;
+  }
+}
+
+/* Responsivo para móviles pequeños */
+@media (max-width: 480px) {
+  .inicio-section {
+    min-height: 100vh;
+    background-size: contain; /* Mantener imagen completa */
+    background-position: center center;
+    padding: 50px 5px;
+  }
+}
+
+/* Responsivo para móviles muy pequeños */
+@media (max-width: 360px) {
+  .inicio-section {
+    background-size: contain;
+    background-position: center center;
+    padding: 40px 5px;
+  }
 }
