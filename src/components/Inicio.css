@@ -1,19 +1,23 @@
 .inicio-section {
   width: 100%;
-  display: block; /* Cambio de flex a block */
+  height: 100vh; /* Altura completa de pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   background-color: transparent;
   border: none;
   outline: none;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
-  max-width: 100%;
+  object-fit: cover; /* CUBRIR TODA LA PANTALLA */
+  object-position: center center;
   margin: 0;
   padding: 0;
   border: none;
@@ -22,18 +26,21 @@
 
 
 
-/* Responsivo SOLO para móviles - quitar espacios blancos */
+/* Responsivo SOLO para móviles - Pantalla completa profesional */
 @media (max-width: 768px) {
   .inicio-section {
+    height: 100vh; /* Altura completa */
     padding: 0;
     margin: 0;
     background-color: transparent;
+    overflow: hidden;
   }
   
   .hero-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100vh; /* Altura completa de la pantalla */
+    object-fit: cover; /* Cubrir toda la pantalla */
+    object-position: center center;
     margin: 0;
     padding: 0;
     display: block;
@@ -42,15 +49,18 @@
 
 @media (max-width: 480px) {
   .inicio-section {
+    height: 100vh;
     padding: 0;
     margin: 0;
     background-color: transparent;
+    overflow: hidden;
   }
   
   .hero-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
     margin: 0;
     padding: 0;
     display: block;
@@ -59,15 +69,18 @@
 
 @media (max-width: 360px) {
   .inicio-section {
+    height: 100vh;
     padding: 0;
     margin: 0;
     background-color: transparent;
+    overflow: hidden;
   }
   
   .hero-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
     margin: 0;
     padding: 0;
     display: block;
