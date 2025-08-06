@@ -171,4 +171,4 @@ Este proyecto está desarrollado para uso profesional del Dr. Jhon Guevara.
 
 ---
 
-*Desarrollado con ❤️ para brindar la mejor experiencia digital a los pacientes del Dr. Jhon Guevara*
+*Desarrollado con  para brindar la mejor experiencia digital a los pacientes del Dr. Jhon Guevara*

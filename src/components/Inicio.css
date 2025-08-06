@@ -1,67 +1,53 @@
 .inicio-section {
-  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.hero-image {
   width: 100%;
   height: auto;
-  min-height: 60vh; /* Altura reducida para móviles */
-  background-size: contain; /* IMAGEN COMPLETA SIN RECORTES */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-color: #ffffff;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  filter: none !important;
-  backdrop-filter: none !important;
-  -webkit-filter: none !important;
-  -moz-filter: none !important;
-  -ms-filter: none !important;
-  padding: 20px 0; /* Padding reducido */
+  display: block;
+  object-fit: contain; /* IMAGEN COMPLETA SIN RECORTES */
+  max-width: 100%;
 }
 
 
 
 
-/* Responsivo para tablets */
+/* Responsivo para todos los dispositivos */
 @media (max-width: 1024px) {
-  .inicio-section {
-    min-height: 50vh;
-    background-size: contain; /* Imagen completa */
-    background-position: center center;
-    background-attachment: scroll;
-    padding: 15px 10px;
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
-/* Responsivo para móviles */
 @media (max-width: 768px) {
-  .inicio-section {
-    min-height: 40vh; /* Altura adaptada a móviles */
-    background-size: contain; /* IMAGEN COMPLETA SIN RECORTES */
-    background-position: center center;
-    background-attachment: scroll;
-    padding: 10px;
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
-/* Responsivo para móviles pequeños */
 @media (max-width: 480px) {
-  .inicio-section {
-    min-height: 35vh; /* Altura optimizada */
-    background-size: contain; /* IMAGEN COMPLETA */
-    background-position: center center;
-    background-attachment: scroll;
-    padding: 10px 5px;
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
-/* Responsivo para móviles muy pequeños */
 @media (max-width: 360px) {
-  .inicio-section {
-    min-height: 30vh; /* Altura compacta */
-    background-size: contain; /* IMAGEN COMPLETA */
-    background-position: center center;
-    background-attachment: scroll;
-    padding: 5px;
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }

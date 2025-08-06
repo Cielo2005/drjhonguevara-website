@@ -4,14 +4,12 @@ import InicioImage from './images/Jhon.jpg';
 
 function Inicio() {
   return (
-    <section
-      id="inicio"
-      className="inicio-section"
-      style={{
-        backgroundImage: `url(${InicioImage})`,
-      }}
-    >
-      {/* Solo la imagen de fondo, sin overlays ni contenedores */}
+    <section id="inicio" className="inicio-section">
+      <img 
+        src={InicioImage} 
+        alt="Dr. Jhon Guevara - Cirugía oncológica" 
+        className="hero-image"
+      />
     </section>
   );
 }
