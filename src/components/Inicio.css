@@ -2,10 +2,10 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-size: contain; /* Imagen completa sin recortar */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll; /* Mejor para móviles */
+  background-attachment: fixed;
   background-color: #ffffff;
   border: none;
   outline: none;
@@ -15,7 +15,7 @@
   -webkit-filter: none !important;
   -moz-filter: none !important;
   -ms-filter: none !important;
-  padding: 80px 0; /* Espacio para el header */
+  padding: 80px 0;
 }
 
 
@@ -24,8 +24,9 @@
 /* Responsivo para tablets */
 @media (max-width: 1024px) {
   .inicio-section {
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
+    background-attachment: scroll;
     padding: 70px 10px;
   }
 }
@@ -34,8 +35,9 @@
 @media (max-width: 768px) {
   .inicio-section {
     min-height: 100vh;
-    background-size: contain; /* Imagen completa sin recortar */
-    background-position: center center;
+    background-size: cover;
+    background-position: center top; /* Enfoque en la parte superior */
+    background-attachment: scroll;
     padding: 60px 10px;
   }
 }
@@ -44,8 +46,9 @@
 @media (max-width: 480px) {
   .inicio-section {
     min-height: 100vh;
-    background-size: contain; /* Mantener imagen completa */
-    background-position: center center;
+    background-size: cover;
+    background-position: center 20%; /* Ajuste específico para mostrar mejor al doctor */
+    background-attachment: scroll;
     padding: 50px 5px;
   }
 }
@@ -53,8 +56,9 @@
 /* Responsivo para móviles muy pequeños */
 @media (max-width: 360px) {
   .inicio-section {
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center 25%; /* Posición optimizada para pantallas pequeñas */
+    background-attachment: scroll;
     padding: 40px 5px;
   }
 }
