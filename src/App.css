@@ -14,9 +14,11 @@ html {
 body {
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden;
-  background-color: #ffffff;
+  background-color: transparent; /* Eliminar fondo blanco */
   width: 100%;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ========== Responsive Typography ========== */
@@ -106,6 +108,22 @@ body {
 .App {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Sin fondo blanco */
+}
+
+/* ========== ELIMINAR TODOS LOS ESPACIOS BLANCOS ========== */
+.App > section {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background-color: transparent;
+}
+
+.App > * {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* ========== SOLO MÓVILES - Eliminar espacios entre secciones ========== */

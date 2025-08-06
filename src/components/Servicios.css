@@ -1,6 +1,7 @@
 .servicios-grid-section {
   position: relative;
-  padding: 60px 0 60px 0;
+  padding: 0; /* Eliminar padding completamente */
+  margin: 0; /* Eliminar margin */
   display: flex;
   flex-direction: column;
   align-items: center;
