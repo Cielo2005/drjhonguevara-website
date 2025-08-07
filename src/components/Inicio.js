@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Inicio.css';
 import InicioImage from './images/Jhon.jpg';
+import LOGO from './images/LOGO.png';
 
 function Inicio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +17,11 @@ function Inicio() {
         alt="Dr. Jhon Guevara - Cirugía oncológica" 
         className="hero-image"
       />
+      
+      {/* Logo en esquina superior izquierda */}
+      <div className="mobile-logo">
+        <img src={LOGO} alt="Logo Dr. Jhon Guevara" />
+      </div>
       
       {/* Botón Hamburguesa */}
       <div className="hamburger-menu">

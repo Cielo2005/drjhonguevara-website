@@ -24,6 +24,33 @@
   border: none;
 }
 
+/* ===== LOGO MÓVIL ===== */
+.mobile-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mobile-logo:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.mobile-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
 /* ===== MENÚ HAMBURGUESA ===== */
 .hamburger-menu {
   position: absolute;
@@ -163,6 +190,10 @@
   .hamburger-menu {
     display: block; /* Mostrar en móviles */
   }
+
+  .mobile-logo {
+    display: block; /* Mostrar logo en móviles */
+  }
 }
 
 @media (max-width: 480px) {
@@ -196,6 +227,11 @@
   .mobile-nav ul li a {
     font-size: 16px;
     padding: 18px 25px;
+  }
+
+  .mobile-logo img {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -231,11 +267,20 @@
     font-size: 15px;
     padding: 16px 20px;
   }
+
+  .mobile-logo img {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /* Ocultar en desktop */
 @media (min-width: 769px) {
   .hamburger-menu {
+    display: none;
+  }
+
+  .mobile-logo {
     display: none;
   }
 }
