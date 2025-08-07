@@ -32,13 +32,13 @@ function Inicio() {
         {/* Menú desplegable */}
         <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
           <ul>
-            <li><a href="#inicio" onClick={toggleMenu}>Inicio</a></li>
-            <li><a href="#servicios" onClick={toggleMenu}>Servicios</a></li>
-            <li><a href="#planes" onClick={toggleMenu}>Beneficios</a></li>
-            <li><a href="#equipo" onClick={toggleMenu}>Nuestro Equipo</a></li>
-            <li><a href="#galeria" onClick={toggleMenu}>Galería</a></li>
-            <li><a href="#contacto" onClick={toggleMenu}>Contacto</a></li>
-            <li><a href="#historia" onClick={toggleMenu}>Historia</a></li>
+            <li><a href="#inicio" onClick={toggleMenu}>🏠 Inicio</a></li>
+            <li><a href="#servicios" onClick={toggleMenu}>🩺 Servicios</a></li>
+            <li><a href="#planes" onClick={toggleMenu}>⭐ Beneficios</a></li>
+            <li><a href="#equipo" onClick={toggleMenu}>👥 Nuestro Equipo</a></li>
+            <li><a href="#galeria" onClick={toggleMenu}>📸 Galería</a></li>
+            <li><a href="#historia" onClick={toggleMenu}>📖 Historia</a></li>
+            <li><a href="#contacto" onClick={toggleMenu}>📞 Contacto</a></li>
           </ul>
         </nav>
       </div>
