@@ -168,6 +168,7 @@ Para consultas sobre el desarrollo del sitio web:
 ## 📄 Licencia
 
 Este proyecto está desarrollado para uso profesional del Dr. Jhon Guevara.
+ creado por Mary Cielo Acuña Teniente 
 
 ---
 
