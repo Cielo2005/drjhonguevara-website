@@ -15,23 +15,23 @@ function Historia() {
   };
 
   return (
-    <section id="historia" className="inicio-section">
-      <div className="inicio-container">
-        <div className="inicio-content">
-          <div className="inicio-info">
-            <div className="inicio-header">
+    <section id="historia" className="historia-section">
+      <div className="historia-container">
+        <div className="historia-content">
+          <div className="historia-info">
+            <div className="historia-header">
               
               <h1 className="hospital-name">Dr. Jhon Erick Guevara Pacheco</h1>
               <h2 className="hospital-subtitle">Oncólogo Especialista</h2>
             </div>
             
-            <p className="inicio-description">
+            <p className="historia-description">
               Especialista en oncología médica con amplia experiencia en el tratamiento integral del cáncer. 
               Comprometido con brindar atención médica de la más alta calidad utilizando tecnología de vanguardia 
               y un enfoque humanizado en el cuidado de nuestros pacientes.
             </p>
             
-            <div className="inicio-services">
+            <div className="historia-services">
               <div className="services-column">
                 <div className="service-item">
                   <span className="checkmark">✓</span>
@@ -62,7 +62,7 @@ function Historia() {
               </div>
             </div>
             
-            <div className="inicio-credentials">
+            <div className="historia-credentials">
               <div className="credential-item">
                 <div className="credential-icon">
                   <div className="years-badge">15+</div>
@@ -83,7 +83,7 @@ function Historia() {
             </button>
           </div>
           
-          <div className="inicio-image">
+          <div className="historia-image">
             <img src={historiaImage} alt="Dr. Jhon Erick Guevara Pacheco" className="doctor-image" />
           </div>
         </div>

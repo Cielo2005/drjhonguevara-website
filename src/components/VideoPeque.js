@@ -5,6 +5,7 @@ import video2 from './Videos/video-2.mp4';
 import video3 from './Videos/video-3.mp4';
 import video4 from './Videos/video-4.mp4';
 
+
 const VideosPeque = () => {
   const videos = [video2, video3, video4];
 

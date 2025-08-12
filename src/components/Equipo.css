@@ -1,75 +1,100 @@
-/* Equipo.css - Carrusel infinito de 3 doctores - DISEÑO CENTRADO Y ORGANIZADO */
+/* ========================================================================
+   EQUIPO.CSS - CARRUSEL DE DOCTORES
+   ======================================================================== */
 
-/* Contenedor principal - BIEN CENTRADO */
+/* ========================================================================
+   CONFIGURACIÓN DESKTOP (PANTALLA GRANDE)
+   ======================================================================== */
+
+/* Contenedor principal - DESKTOP */
 .carousel-section {
-  padding: 80px 20px;
-  background: #f8fafb;
+  padding: 40px 20px;
+  margin: 20px 0;
+  background: #ffffff;
   text-align: center;
   position: relative;
   isolation: isolate;
   width: 100%;
-  min-height: 600px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Header centrado */
+/* Header - DESKTOP */
 .carousel-header {
-  max-width: 800px;
-  margin: 0 auto 80px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  text-align: center;
 }
 
 .carousel-header h1 {
   color: #0ea5e9;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-family: 'Poppins', sans-serif;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .carousel-header p {
   color: #9ca3af;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.4;
   font-family: 'Poppins', sans-serif;
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
+  text-align: center;
 }
 
-/* Contenedor del carrusel - PERFECTAMENTE CENTRADO */
+/* Contenedor del carrusel - DESKTOP */
 .carousel-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  .carousel-container {
+    overflow: visible;
+  }
+  .carousel-arrow {
+    width: 28px;
+    height: 28px;
+  }
   justify-content: center;
-  gap: 40px;
+  gap: 15px;
+  width: 100%;
 }
 
-/* Wrapper del carrusel */
+/* Wrapper del carrusel - DESKTOP */
 .carousel-wrapper {
   flex: 1;
   overflow: hidden;
   max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-/* Track del carrusel - BIEN ALINEADO */
+/* Track del carrusel - DESKTOP */
 .carousel-track {
   display: flex;
   gap: 30px;
   transition: transform 0.5s ease-in-out;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-/* Tarjetas de doctores - PERFECTAMENTE ALINEADAS */
+/* Tarjetas de doctores - DESKTOP */
 .carousel-section .doctor-card {
-  flex: 0 0 calc(33.333% - 20px);
-  width: 280px;
-  background: white !important;
-  border-radius: 20px !important;
+  flex: 0 0 calc(33.333% - 8px);
+  width: 240px;
+  background: rgb(255, 255, 255) !important;
+  border-radius: 12px !important;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: none !important;
   outline: none !important;
@@ -78,11 +103,11 @@
 }
 
 .carousel-section .doctor-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Contenedor de imagen - BIEN PROPORCIONADO */
+/* Contenedor de imagen - ALTURA AUMENTADA */
 .carousel-section .doctor-image-container {
   position: relative;
   height: 350px;
@@ -92,10 +117,10 @@
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  border-radius: 20px 20px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
-/* Imagen - PERFECTAMENTE AJUSTADA */
+/* Imagen - ULTRA COMPACTA */
 .carousel-section .doctor-image {
   width: 100% !important;
   height: 100% !important;
@@ -108,10 +133,10 @@
   outline: none !important;
   box-shadow: none !important;
   display: block !important;
-  border-radius: 20px 20px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
-/* Overlay perfectamente posicionado */
+/* Overlay compacto */
 .doctor-overlay {
   position: absolute;
   bottom: 0;
@@ -119,19 +144,20 @@
   right: 0;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
   color: white;
-  padding: 30px 20px 20px;
+  padding: 15px 15px 12px;
   text-align: center;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 12px 12px;
 }
 
-/* Texto bien proporcionado */
+/* Texto compacto */
 .doctor-name {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.2;
+  line-height: 1.1;
+  text-transform: capitalize;
 }
 
 .doctor-specialty {
@@ -140,15 +166,16 @@
   margin: 0;
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.3;
+  line-height: 1.1;
+  text-transform: capitalize;
 }
 
-/* Flechas bien centradas */
+/* Flechas compactas */
 .carousel-arrow {
-  width: 60px;
-  height: 60px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: none;
   color: #0ea5e9;
   cursor: pointer;
@@ -156,7 +183,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   z-index: 10;
   flex-shrink: 0;
   position: relative;
@@ -165,8 +192,8 @@
 .carousel-arrow:hover {
   background: #0ea5e9;
   color: white;
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(14, 165, 233, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 3px 15px rgba(14, 165, 233, 0.2);
 }
 
 .carousel-arrow:active {
@@ -174,60 +201,139 @@
 }
 
 .carousel-arrow svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
-/* Responsive - BIEN ORGANIZADO */
+/* ========================================================================
+   CONFIGURACIÓN MÓVIL (RESPONSIVE)
+   ======================================================================== */
+
+/* Responsive - PADDING AUMENTADO */
 @media (max-width: 1024px) {
   .carousel-container {
-    gap: 30px;
+    width: 100%;
+    min-width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0 10px;
+    position: relative;
+    overflow: visible;
   }
-  
+  .carousel-arrow {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: #0ea5e9;
+    color: #fff;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .carousel-arrow.carousel-arrow-left {
+    left: 0;
+  }
+  .carousel-arrow.carousel-arrow-right {
+    right: 0;
+  }
   .carousel-track {
-    gap: 20px;
+    gap: 12px;
   }
   
   .carousel-section .doctor-card {
-    flex: 0 0 calc(33.333% - 14px);
-    width: 250px;
+    flex: 0 0 calc(33.333% - 8px);
+    width: 135px;
   }
   
   .carousel-section .doctor-image-container {
-    height: 320px;
+    height: 220px;
   }
   
   .carousel-arrow {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
+  }
+  
+  .carousel-arrow svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
+/* ======================================
+   TABLET (768px y menores) - UNA PERSONA
+   ====================================== */
 @media (max-width: 768px) {
   .carousel-section {
-    padding: 60px 15px;
+    padding: 30px 15px;
+    margin: 20px 0;
+    min-height: auto;
+  }
+  
+  .carousel-header {
+    margin: 0 auto 25px;
   }
   
   .carousel-header h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
   }
   
   .carousel-header p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    max-width: 350px;
   }
   
   .carousel-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
+    padding: 0 15px;
+    position: relative;
   }
   
-  .carousel-track {
-    gap: 15px;
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    background: #0ea5e9;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);
+    flex-shrink: 0;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .carousel-wrapper {
+    flex: 0 0 240px;
+    max-width: 240px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    place-self: center; /* centra dentro de su celda */
+  }  .carousel-track {
+    gap: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
   
   .carousel-section .doctor-card {
-    flex: 0 0 calc(45% - 10px);
-    width: 220px;
+    flex: 0 0 100%;
+    width: 240px;
+    margin: 0 auto;
   }
   
   .carousel-section .doctor-image-container {
@@ -235,50 +341,218 @@
   }
   
   .doctor-overlay {
-    padding: 20px 15px 15px;
+    padding: 14px 12px 12px;
   }
   
   .doctor-name {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
   }
   
   .doctor-specialty {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   
-  .carousel-arrow {
-    width: 45px;
-    height: 45px;
+  .carousel-arrow svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
-@media (max-width: 480px) {
+/* ======================================
+   MÓVIL GRANDE (600px y menores)
+   ====================================== */
+@media (max-width: 600px) {
+  .carousel-arrow.carousel-arrow-left {
+    left: 18px;
+    transform: translateY(-50%) translateX(0);
+  }
+  .carousel-arrow.carousel-arrow-right {
+    right: 18px;
+    transform: translateY(-50%) translateX(0);
+  }
+  .carousel-header {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  
+  .carousel-header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-header p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    max-width: 300px;
+  }
+  
+  /* Arrows a los lados y tarjeta centrada */
   .carousel-container {
-    flex-direction: column;
-    gap: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0 12px;
+    position: relative;
+  }
+  
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    background: #0ea5e9;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);
+    flex-shrink: 0;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .carousel-wrapper {
+    flex: 0 0 180px;
+    max-width: 180px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    place-self: center;
+  }  .carousel-track {
+    gap: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
   
   .carousel-section .doctor-card {
     flex: 0 0 100%;
-    width: 280px;
-    max-width: 90vw;
+    width: 180px;
     margin: 0 auto;
+  }
+  
+  .carousel-section .doctor-image-container {
+    height: 220px;
+  }
+  
+  .doctor-overlay {
+    padding: 12px 10px 10px;
+  }
+  
+  .doctor-name {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+  
+  .doctor-specialty {
+    font-size: 0.7rem;
+  }
+  
+  .carousel-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ======================================
+   MÓVIL PEQUEÑO (480px y menores)
+   ====================================== */
+@media (max-width: 480px) {
+  .carousel-section {
+    padding: 18px 10px;
+    margin: 10px 0;
+    min-height: auto;
+  }
+  
+  .carousel-header {
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+  
+  .carousel-header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+  
+  .carousel-header p {
+    font-size: 0.78rem;
+    line-height: 1.2;
+    max-width: 260px;
+  }
+  
+  /* Ajuste para caber en 320px: flechas + tarjeta + espacios */
+  .carousel-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 10px;
+    position: relative;
+  }
+  
+  .carousel-arrow {
+    width: 28px;
+    height: 28px;
+    background: #0ea5e9;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);
+    flex-shrink: 0;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .carousel-wrapper {
+    flex: 0 0 160px;
+    max-width: 160px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  place-self: center;
   }
   
   .carousel-track {
     gap: 0;
     justify-content: center;
+    display: flex;
+    align-items: center;
   }
   
-  .carousel-header h1 {
-    font-size: 1.8rem;
+  .carousel-section .doctor-card {
+    flex: 0 0 100%;
+    width: 160px;
+    margin: 0 auto;
   }
   
   .carousel-section .doctor-image-container {
-    height: 320px;
+    height: 230px;
   }
   
-  .carousel-wrapper {
-    max-width: 100%;
+  .doctor-overlay {
+    padding: 10px 8px 8px;
+  }
+  
+  .doctor-name {
+    font-size: 0.78rem;
+    margin-bottom: 3px;
+  }
+  
+  .doctor-specialty {
+    font-size: 0.68rem;
+  }
+  
+  .carousel-arrow svg {
+    width: 12px;
+    height: 12px;
   }
 }

@@ -116,21 +116,21 @@ body {
 }
 
 /* ========== ELIMINAR TODOS LOS ESPACIOS BLANCOS ========== */
-.App > section {
+.App > section:not(.carousel-section) {
   margin: 0 !important;
   padding: 0 !important;
   border: none !important;
   background-color: transparent;
 }
 
-.App > * {
+.App > *:not(.carousel-section) {
   margin: 0 !important;
   padding: 0 !important;
 }
 
 /* ========== SOLO MÓVILES - Eliminar espacios entre secciones ========== */
 @media (max-width: 768px) {
-  .App > section {
+  .App > section:not(.carousel-section) {
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -142,14 +142,14 @@ body {
   }
   
   /* Asegurar que servicios esté pegado a inicio */
-  section + section {
+  section + section:not(.carousel-section) {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
 }
 
 @media (max-width: 480px) {
-  .App > section {
+  .App > section:not(.carousel-section) {
     margin: 0 !important;
     padding: 0 !important;
   }

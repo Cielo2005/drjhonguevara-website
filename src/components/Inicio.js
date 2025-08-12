@@ -12,18 +12,19 @@ function Inicio() {
 
   return (
     <section id="inicio" className="inicio-section">
+      {/* Imagen de fondo */}
       <img 
         src={InicioImage} 
         alt="Dr. Jhon Guevara - Cirugía oncológica" 
         className="hero-image"
       />
       
-      {/* Logo en esquina superior izquierda */}
+      {/* Logo móvil */}
       <div className="mobile-logo">
         <img src={LOGO} alt="Logo Dr. Jhon Guevara" />
       </div>
       
-      {/* Botón Hamburguesa */}
+      {/* Botón hamburguesa */}
       <div className="hamburger-menu">
         <button 
           className={`hamburger-btn ${menuOpen ? 'active' : ''}`} 
@@ -35,7 +36,7 @@ function Inicio() {
           <span></span>
         </button>
         
-        {/* Menú desplegable */}
+        {/* Menú móvil */}
         <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li><a href="#inicio" onClick={toggleMenu}>🏠 Inicio</a></li>
@@ -53,4 +54,3 @@ function Inicio() {
 }
 
 export default Inicio;
-

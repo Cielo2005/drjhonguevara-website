@@ -1,7 +1,8 @@
 #footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   color: white;
-  padding: 60px 20px 30px;
+  padding: 80px 20px 40px;
+  margin-top: 60px;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   position: relative;
   overflow: hidden;

@@ -1,31 +1,45 @@
 .videos-peque-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  background-color: #0f0e0e;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  width: 100vw;
-  max-width: 100%;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  background-color: #000000 !important;
+  padding: 120px 15px !important;
+  margin: 80px 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  position: relative !important;
+  z-index: 1 !important;
+  clear: both !important;
+  min-height: 70vh !important;
+}
+
+.videos-peque-container::before {
+  content: '';
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.videos-peque-container::after {
+  content: '';
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
 }
 
 .video-peque-wrapper {
-  flex: 1 1 300px;
-  max-width: 32%;
+  flex: 1 1 250px; /* Tamaño flexible con mínimo más pequeño */
+  max-width: 30%; /* 3 columnas con más espacio entre ellas */
   aspect-ratio: 16/9;
-  border: 2px solid #222;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   background-color: black;
-  transition: all 0.3s ease;
-}
-
-.video-peque-wrapper:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
-  border-color: #444;
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
 }
 
 .video-peque {
@@ -38,85 +52,79 @@
   object-position: center;
 }
 
-@media (max-width: 1400px) {
-  .videos-peque-container {
-    padding: 35px 18px;
-    gap: 18px;
-  }
-  
+/* Responsive: apila los videos */
+@media (max-width: 900px) {
   .video-peque-wrapper {
-    flex: 1 1 280px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .videos-peque-container {
-    padding: 30px 15px;
-    gap: 15px;
-  }
-  
-  .video-peque-wrapper {
-    flex: 1 1 260px;
-    max-width: 48%;
-  }
-}
-
-@media (max-width: 992px) {
-  .videos-peque-container {
-    padding: 25px 12px;
-    gap: 12px;
-  }
-  
-  .video-peque-wrapper {
-    flex: 1 1 240px;
-    max-width: 48%;
-  }
-}
-
-@media (max-width: 768px) {
-  .videos-peque-container {
-    padding: 20px 10px;
-    gap: 10px;
-  }
-  
-  .video-peque-wrapper {
-    flex: 1 1 220px;
     max-width: 100%;
   }
 }
 
-@media (max-width: 600px) {
+/* Tablet */
+@media (max-width: 768px) {
   .videos-peque-container {
-    padding: 18px 8px;
-    gap: 8px;
+    padding: 100px 35px !important;
+    margin: 50px 0 !important;
+    background-color: #000000 !important;
+    min-height: auto !important;
+    flex-direction: column !important;
+    gap: 30px !important;
   }
   
   .video-peque-wrapper {
-    flex: 1 1 200px;
-    border-radius: 8px;
+    flex: none;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .videos-peque-container::before,
+  .videos-peque-container::after {
+    height: 30px;
   }
 }
 
+/* Móvil */
 @media (max-width: 480px) {
   .videos-peque-container {
-    padding: 15px 5px;
-    gap: 6px;
+    padding: 80px 30px !important;
+    margin: 40px 0 !important;
+    background-color: #000000 !important;
+    min-height: auto !important;
+    flex-direction: column !important;
+    gap: 25px !important;
   }
   
   .video-peque-wrapper {
-    flex: 1 1 180px;
-    border-radius: 6px;
-    border-width: 1px;
+    flex: none;
+    width: 85%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .videos-peque-container::before,
+  .videos-peque-container::after {
+    height: 20px;
   }
 }
 
+/* Móvil pequeño */
 @media (max-width: 360px) {
   .videos-peque-container {
-    padding: 12px 3px;
-    gap: 5px;
+    padding: 60px 25px !important;
+    margin: 30px 0 !important;
+    flex-direction: column !important;
+    gap: 20px !important;
   }
   
   .video-peque-wrapper {
-    flex: 1 1 160px;
+    flex: none;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .videos-peque-container::before,
+  .videos-peque-container::after {
+    height: 15px;
   }
 }

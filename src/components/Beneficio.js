@@ -15,37 +15,37 @@ function Beneficios() {
       icon: EvaLua,
       
       titulo: "Evaluación Inicial",
-      texto: "Consulta con el cirujano oncólogo para diagnóstico y planificación personalizada."
+      texto: "Consulta especializada para diagnóstico y planificación personalizada."
     },
     {
       icon: PreOpe,
       
       titulo: "Exámenes Preoperatorios",
-      texto: "Estudios de laboratorio e imágenes para evaluar el estado general del paciente."
+      texto: "Estudios de laboratorio e imágenes para evaluar el estado del paciente."
     },
     {
       icon: Cirugi,
      
       titulo: "Cirugía Oncológica",
-      texto: "Procedimiento quirúrgico especializado para extirpar el tumor y tejidos afectados."
+      texto: "Procedimiento quirúrgico especializado con técnicas avanzadas."
     },
     {
       icon: Hospi,
       
       titulo: "Hospitalización segura",
-      texto: "Monitoreo postoperatorio integral y continuo en un entorno seguro y supervisado."
+      texto: "Monitoreo postoperatorio integral en un entorno seguro y supervisado."
     },
     {
       icon: ExamPo,
       
       titulo: "Seguimiento Postoperatorio",
-      texto: "Revisión médica, control de recuperación y manejo de posibles complicaciones."
+      texto: "Revisión médica, control de recuperación y manejo de complicaciones."
     },
     {
       icon: Medi,
      
       titulo: "Tratamiento Complementario",
-      texto: "Indicación de medicamentos, terapias o cuidados adicionales según evolución."
+      texto: "Indicación de medicamentos, terapias o cuidados según evolución."
     }
   ];
 
@@ -64,8 +64,10 @@ function Beneficios() {
             key={idx}
             style={{ animationDelay: `${idx * 0.18 + 0.2}s` }}
           >
-            <div className="timeline-circle animar-circulo">
-              <img src={paso.icon} alt={paso.titulo} />
+            <div className="timeline-circle-container">
+              <div className="timeline-circle animar-circulo">
+                <img src={paso.icon} alt={paso.titulo} />
+              </div>
             </div>
             <div className="timeline-box animar-box">
               <h4>{paso.titulo}</h4>

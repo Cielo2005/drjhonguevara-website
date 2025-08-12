@@ -10,12 +10,12 @@ import equipo5 from './images/equipo5.png';
 const teamMembers = [
   {
     nombre: "Dr. Luis Omar",
-    especialidad: "Cirujano Oncólogo",
+    especialidad: "Cirujano general - Tórax",
     imagen: equipo1
   },
   {
-    nombre: "Dr. Fabian Lopez", 
-    especialidad: "Cirujano General",
+    nombre: "Dr. Fabian Lopez",
+    especialidad: "Cirujano Oncológico",
     imagen: equipo2
   },
   {
@@ -25,19 +25,46 @@ const teamMembers = [
   },
   {
     nombre: "Dr. Omar Condori",
-    especialidad: "Médico Oncólogo ",
+    especialidad: "Cirujano Oncológico",
     imagen: equipo4
   },
   {
     nombre: "Dr. Guillermo Venero",
-    especialidad: "Médico Quirúrgico",
+    especialidad: "Cirujano general - Abdomen",
     imagen: equipo5
   }
 ];
 
 const Equipo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 3;
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Detectar si es móvil
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Auto-avance cada 3 segundos en móvil
+  React.useEffect(() => {
+    if (isMobile) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => 
+          prevIndex + 1 >= teamMembers.length ? 0 : prevIndex + 1
+        );
+      }, 3000); // 3 segundos
+      
+      return () => clearInterval(interval);
+    }
+  }, [isMobile]);
+  
+  const itemsToShow = isMobile ? 1 : 3;
   
   // Función para ir al siguiente grupo
   const nextSlide = () => {
@@ -53,7 +80,7 @@ const Equipo = () => {
     );
   };
   
-  // Función para obtener 3 doctores visibles (rotación infinita)
+  // Función para obtener doctores visibles (1 en móvil, 3 en desktop - rotación infinita)
   const getVisibleDoctors = () => {
     const visible = [];
     for (let i = 0; i < itemsToShow; i++) {
@@ -66,11 +93,10 @@ const Equipo = () => {
   return (
     <section className="carousel-section">
       <div className="carousel-header">
-        <h1>Conozca a nuestros médicos</h1>
+        <h1>Nuestro Equipo Médico</h1>
         <p>
-          Nuestro equipo médico especializado está comprometido con brindar la mejor atención 
-          oncológica, combinando experiencia profesional y tecnología avanzada para el cuidado 
-          integral de nuestros pacientes.
+          Profesionales especializados comprometidos con la excelencia en atención oncológica 
+          y el bienestar integral de nuestros pacientes.
         </p>
       </div>
       

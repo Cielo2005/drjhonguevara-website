@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Servicios.css';
 
 import fondo from './images/FON.jpg';
@@ -157,7 +157,22 @@ function Servicios() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
-  const serviciosPerPage = 4; // Mostrar 4 servicios a la vez
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Hook para detectar si es móvil
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  // Determinar cuántos servicios mostrar según el dispositivo
+  const serviciosPerPage = isMobile ? 2 : 4;
 
   // Validar que currentIndex no exceda los límites
   const validateIndex = (index) => {
@@ -186,7 +201,7 @@ function Servicios() {
     setIsAnimating(true);
     setCurrentIndex((prevIndex) => {
       if (prevIndex === 0) {
-        // Calcular el último grupo completo de 4 servicios
+        // Calcular el último grupo completo según serviciosPerPage
         const totalPages = Math.ceil(servicios.length / serviciosPerPage);
         return (totalPages - 1) * serviciosPerPage;
       }
@@ -202,12 +217,12 @@ function Servicios() {
     setTimeout(() => setIsAnimating(false), 600);
   };
 
-  // Obtener exactamente 4 servicios visibles
+  // Obtener servicios visibles según el dispositivo
   const getVisibleServicios = () => {
     const endIndex = Math.min(currentIndex + serviciosPerPage, servicios.length);
     const visible = servicios.slice(currentIndex, endIndex);
     
-    // Si no tenemos 4 servicios completos al final, completar con servicios del principio
+    // Si no tenemos servicios completos al final, completar con servicios del principio
     while (visible.length < serviciosPerPage && visible.length < servicios.length) {
       const wrapIndex = (currentIndex + visible.length) % servicios.length;
       visible.push({
@@ -233,7 +248,7 @@ function Servicios() {
       <div className="servicios-grid-header">
         <h1 className="servicios-grid-title">Servicios</h1>
         <p className="servicios-grid-desc">
-          Información y atención especializada en los principales tipos de cáncer. Haz clic en cada sección para saber más.
+          Información y atención especializada en los principales tipos de cáncer.
         </p>
       </div>
       

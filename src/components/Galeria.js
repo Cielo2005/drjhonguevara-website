@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Galeria.css';
 
 // Imágenes
@@ -15,6 +15,8 @@ import Galeria13 from './images/galeria13.png';
 import Galeria14 from './images/galeria14.jpg';
 
 function Galeria() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const imagenes = [
   { id: 1, src: Rejuvenecimiento, alt: 'Cáncer de Ovario', },
   { id: 2, src: Contorno, alt: 'Tumor Benigno de Ovario',  },
@@ -28,6 +30,17 @@ function Galeria() {
   { id: 11, src: Galeria14, alt: 'Cáncer de Tiroides', descripcion: '(Tiroidectomías con o sin Disección de Cuello)' }
 ];
 
+  // Animación automática cada 2 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => 
+        prevIndex + 1 >= imagenes.length ? 0 : prevIndex + 1
+      );
+    }, 2000); // 2 segundos
+    
+    return () => clearInterval(interval);
+  }, [imagenes.length]);
+
 
   return (
     <section id="galeria" className="galeria-section">
@@ -36,15 +49,15 @@ function Galeria() {
         <p>Descubre nuestros trabajos más recientes y destacados</p> 
       </div>
       <div className="galeria-grid">
-        {imagenes.map((img) => (
+        {imagenes.map((img, index) => (
           <div key={img.id} className="galeria-item">
             <div
               className="galeria-image"
               style={{ backgroundImage: `url(${img.src})` }}
             >
-              <div className="galeria-overlay">
+              <div className={`galeria-overlay ${activeIndex === index ? 'active' : ''}`}>
                 <h3>{img.alt}</h3>
-                
+                {img.descripcion && <p>{img.descripcion}</p>}
               </div>
             </div>
           </div>

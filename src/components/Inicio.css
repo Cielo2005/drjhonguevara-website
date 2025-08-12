@@ -1,6 +1,9 @@
 .inicio-section {
   width: 100%;
-  height: auto; /* Altura automática para que se ajuste al contenido */
+  height: auto;
+  min-height: auto !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,15 +17,14 @@
 }
 
 .hero-image {
-  width: 100%;
-  height: auto; /* Altura automática */
   display: block;
-  object-fit: contain; /* IMAGEN COMPLETA SIN RECORTES */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   object-position: center center;
   margin: 0;
   padding: 0;
   border: none;
-  max-height: 50vh; /* Máximo la mitad de la pantalla */
 }
 
 /* ===== LOGO MÓVIL ===== */
@@ -128,12 +130,9 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0; /* Sin espacios entre elementos */
 }
 
 .mobile-nav ul li {
-  margin: 0;
-  padding: 0;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -151,49 +150,38 @@
   font-weight: 500;
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
-  text-align: left;
-  width: 100%;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
 }
 
 .mobile-nav ul li a:hover {
   background: rgba(255, 255, 255, 0.15);
   padding-left: 40px;
-  color: #fff;
-  text-decoration: none;
 }
 
-
-
-
-/* Responsivo SOLO para móviles - Imagen completa sin espacios */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .inicio-section {
-    height: auto; /* Altura automática */
+    height: auto;
+    min-height: auto !important;
     padding: 0;
     margin: 0;
+    padding-bottom: 0 !important;
     background-color: transparent;
     overflow: hidden;
   }
-  
   .hero-image {
+    display: block;
     width: 100%;
-    height: auto; /* Altura automática */
-    object-fit: contain; /* IMAGEN COMPLETA SIN RECORTES */
+    height: auto;
+    object-fit: contain;
     object-position: center center;
     margin: 0;
     padding: 0;
-    display: block;
-    max-height: 45vh; /* Menos de la mitad de la pantalla */
+    border: none;
   }
-
-  .hamburger-menu {
-    display: block;
-  }
-
   .mobile-logo {
+    display: block;
+  }
+  .hamburger-menu {
     display: block;
   }
 }
@@ -201,37 +189,39 @@
 @media (max-width: 480px) {
   .inicio-section {
     height: auto;
+    min-height: auto !important;
     padding: 0;
     margin: 0;
+    padding-bottom: 0 !important;
     background-color: transparent;
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
-  
   .hero-image {
+    display: block;
     width: 100%;
     height: auto;
+    max-height: 25vh;
     object-fit: contain;
     object-position: center center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    display: block;
-    max-height: 40vh; /* Ajuste para móviles pequeños */
+    border: none;
+    background: #fff;
   }
-
   .hamburger-btn {
     width: 45px;
     height: 45px;
   }
-
   .mobile-nav {
     width: 300px;
   }
-
   .mobile-nav ul li a {
     font-size: 16px;
     padding: 18px 25px;
   }
-
   .mobile-logo img {
     width: 35px;
     height: 35px;
@@ -241,50 +231,87 @@
 @media (max-width: 360px) {
   .inicio-section {
     height: auto;
+    min-height: auto !important;
     padding: 0;
     margin: 0;
+    padding-bottom: 0 !important;
     background-color: transparent;
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
-  
   .hero-image {
+    display: block;
     width: 100%;
     height: auto;
+    max-height: 25vh;
     object-fit: contain;
     object-position: center center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    display: block;
-    max-height: 38vh; /* Ajuste para pantallas muy pequeñas */
+    border: none;
+    background: #fff;
   }
-
   .hamburger-btn {
     width: 40px;
     height: 40px;
   }
-
   .mobile-nav {
     width: 280px;
   }
-
   .mobile-nav ul li a {
     font-size: 15px;
     padding: 16px 20px;
   }
-
   .mobile-logo img {
     width: 32px;
     height: 32px;
   }
 }
 
-/* Ocultar en desktop */
+@media only screen and (max-width: 414px) {
+  .inicio-section {
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+    height: auto;
+  }
+  
+  .hero-image {
+    max-height: 25vh;
+  }
+}
+
+/* Eliminar espacios entre secciones */
+header {
+  margin: 0;
+  padding: 0;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.hero-section {
+  min-height: auto !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+}
+
 @media (min-width: 769px) {
-  .hamburger-menu {
+  .mobile-logo {
     display: none;
   }
-
-  .mobile-logo {
+  .hamburger-menu {
     display: none;
   }
 }

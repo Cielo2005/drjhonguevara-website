@@ -116,7 +116,7 @@ const Footer = () => {
             <h3>Dr. Jhon Erick Guevara Pacheco</h3>
             <p>Especialista en Cirugía Oncológica y Laparoscópica</p>
             <div className="credentials">
-              <span className="credential">📋 CMP: 12345</span>
+              <span className="credential">📋 CMP: 66430</span>
               <span className="credential">🏥 Especialista Certificado</span>
               <span className="credential">🎓 15+ años de experiencia</span>
             </div>

@@ -63,8 +63,11 @@ ${nombre}%0A%0A
       <div className="formulario-cita-container">
         <div className="formulario-cita-img">
           <div className="formulario-cita-texto-lateral">
-            <span className="azul">¡No esperes </span>
-            <span className="celeste">para reservar tu </span>
+            <span className="azul">¡No</span>
+            <span className="azul">esperes</span>
+            <span className="celeste">para</span>
+            <span className="celeste">reservar</span>
+            <span className="azul">tu</span>
             <span className="azul">cita!</span>
           </div>
           <img src={For} alt="Doctora" />
@@ -132,13 +135,15 @@ ${nombre}%0A%0A
               </div>
             </div>
             <div className="formulario-cita-row">
-              <div className="formulario-cita-field">
-                <label>Fecha preferida</label>
-                <input name="fecha" type="date" required />
-              </div>
-              <div className="formulario-cita-field">
-                <label>Hora preferida</label>
-                <input name="hora" type="time" required />
+              <div className="formulario-cita-field-container">
+                <div className="formulario-cita-field formulario-cita-field-small">
+                  <label>Fecha preferida</label>
+                  <input name="fecha" type="date" required />
+                </div>
+                <div className="formulario-cita-field formulario-cita-field-small">
+                  <label>Hora preferida</label>
+                  <input name="hora" type="time" required />
+                </div>
               </div>
             </div>
             <button
@@ -146,7 +151,7 @@ ${nombre}%0A%0A
               className="formulario-cita-btn"
               style={{ textAlign: 'center', display: 'block', textDecoration: 'none' }}
             >
-              � Reservar por WhatsApp
+              Reservar por WhatsApp
             </button>
           </form>
         </div>
